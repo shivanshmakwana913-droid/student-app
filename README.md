@@ -11,10 +11,11 @@ A lightweight and efficient Node.js utility designed to quickly seed a MongoDB d
 
 ## 🚀 Features
 
-* **Local MongoDB Integration:** Seamless connection to a local `mongodb://127.0.0.1:27017` instance.
+* **Flexible Database Connection:** Connect to a local or cloud MongoDB database instance dynamically.
+* **Environment Configuration:** Secure database configuration using `.env` file via `dotenv`.
 * **Structured Mongoose Schema:** Enforces constraints on `name` (required), `age` (required), and `course` (defaults to "MERN Stack").
-* **Batch Ingestion:** Utilizes `insertMany()` for high-performance concurrent database writes.
-* **Auto-clean Terminal Execution:** Automatically terminates the database connection upon successful operation.
+* **Batch Ingestion:** Utilizes `insertMany()` for high-performance database seeding.
+* **Connection Lifecycle Management:** Automatically terminates the MongoDB connection upon completion.
 
 ---
 
@@ -44,7 +45,7 @@ Follow these steps to run the seeder locally:
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/shivanshmakwana913-droid/student-app.git
 cd student-app
 ```
 
