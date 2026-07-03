@@ -49,18 +49,28 @@ cd student-app
 ```
 
 ### 2. Install Dependencies
-Install the required packages (specifically `mongoose`):
+Install the required packages:
 ```bash
 npm install
 ```
 
-### 3. Start MongoDB Server
+### 3. Configure Environment Variables
+Configure your database URI using `.env` file. You can duplicate the provided template:
+```bash
+copy .env.example .env
+```
+Inside `.env`, verify your connection details:
+```env
+MONGODB_URI=mongodb://127.0.0.1:27017/studentDB
+```
+
+### 4. Start MongoDB Server
 Ensure your local MongoDB instance is active. If running as a Windows service, it starts automatically. If not, start it manually:
 ```bash
 mongod
 ```
 
-### 4. Run the Script
+### 5. Run the Script
 Populate your database by running:
 ```bash
 node app.js
@@ -81,6 +91,8 @@ student-app/
 ├── app.js                 # Entry point & DB operation logic
 ├── package.json           # Project metadata and dependencies
 ├── package-lock.json      # Locked versions of dependencies
+├── .env                   # Local environment variables (gitignored)
+├── .env.example           # Shared environment variables template
 ├── .gitignore             # Git exclusion rules
 └── README.md              # Project documentation (this file)
 ```

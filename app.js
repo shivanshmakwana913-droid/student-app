@@ -1,9 +1,9 @@
-// app.js
-
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-// Connect to MongoDB (local)
-mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
+// Connect to MongoDB
+const mongoURI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/studentDB";
+mongoose.connect(mongoURI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.log("❌ Connection failed:", err));
 
